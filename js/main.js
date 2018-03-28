@@ -355,17 +355,17 @@ var calculation = (function() {
     work = function(op) {
         switch (op) {
             case '+' :
-                first = (first*1 + second*1);
+                first = parseFloat(first*1 + second*1).toPrecision(10);
                 break;
             case '-' :
-                first = (first*1 - second*1);
+                first = parseFloat(first*1 - second*1).toPrecision(10);
                 break;
             case '*' :
-                first = (first*1 * second*1);
+                first = parseFloat(first*1 * second*1).toPrecision(10);
                 break;
             case '/' :
                 if(second != 0) {
-                    first = (first*1 / second*1);
+                    first = parseFloat(first*1 / second*1).toPrecision(10);
                 } else {
                     alert("Value can't be 0");
                 }
